@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+p {
+    font-size: small;
+    font-family:'Courier New', Courier, monospace;
+    color: greenyellow;
+}
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    color: greenyellow;
+    margin-left: 20px;
+}
+a {
+    color: whitesmoke;
+}
+table, th, td {
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    font-size: small;
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    background-color: greenyellow;
+  }
