@@ -1,5 +1,10 @@
 /* Beginner Challenge */
 
+const { bool } = require("prop-types");
+
+// Name: Kyra Ramesh Krishna 
+// Date: March 20, 2023
+
 /* Do all of these using proper ES6 syntax
 Using the following array of objects,
 (1) Write an arrow function that adds a new entry to bookList
@@ -12,6 +17,41 @@ const bookList = [
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
     { title: "Moby Dick", author: "Herman Melville" },
   ];
+
+// (1) 
+addEntry = (t, a) => bookList.push({title: t, author: a});
+
+// (2) 
+removeEntry = (t) => {
+  index = bookList.findIndex(function (bookList) {
+    return bookList.title === t;
+  });
+
+  // index = "indexof: " + bookList.indexOf({title: t, author: a});
+  if (index >= 0) {
+    console.log("exists");
+    bookList.splice(index, 1);
+  }
+};
+
+// (3)
+listOut = (blist) => {
+  blist.forEach((entry) => console.log(entry));
+  // for(let entry in blist) {
+  //   console.log(blist[entry]);
+  // }
+};
+
+// testing
+console.log("---");
+listOut(bookList);
+console.log();
+addEntry("Matilda", "Roald Dahl");
+listOut(bookList);
+console.log();
+removeEntry("The Great Gatsby");
+listOut(bookList);
+console.log("---");
   
   /* Intermediate Challenge */
   
